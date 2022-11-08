@@ -1,9 +1,9 @@
 /* USER CODE BEGIN Header */
 /**
  ******************************************************************************
- * @file    usart.h
+ * @file    i2s.h
  * @brief   This file contains all the function prototypes for
- *          the usart.c file
+ *          the i2s.c file
  ******************************************************************************
  * @attention
  *
@@ -18,8 +18,8 @@
  */
 /* USER CODE END Header */
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __USART_H__
-#define __USART_H__
+#ifndef __I2S_H__
+#define __I2S_H__
 
 #ifdef __cplusplus
 extern "C" {
@@ -29,24 +29,25 @@ extern "C" {
 #include "main.h"
 
 /* USER CODE BEGIN Includes */
-
+#include <stdint.h>
 /* USER CODE END Includes */
 
-extern UART_HandleTypeDef huart3;
+extern I2S_HandleTypeDef hi2s3;
 
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
 
-void MX_USART3_UART_Init(void);
+void MX_I2S3_Init(void);
 
 /* USER CODE BEGIN Prototypes */
-void uart_send(uint8_t *data, uint32_t size);
+void i2s_read(uint16_t *buffer, uint32_t size);
+
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* __USART_H__ */
+#endif /* __I2S_H__ */
 

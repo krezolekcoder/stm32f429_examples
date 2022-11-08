@@ -1,0 +1,1 @@
+pyocd flash -t stm32f429xi build/stm32f429_examples.hex
